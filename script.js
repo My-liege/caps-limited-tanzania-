@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollToHero = (e) => {
         e?.preventDefault?.();
 
-        // Only scroll on pages that actually have the #hero element (e.g., LAND.HTML)
+
         if (hero) {
             hero.scrollIntoView({
                 behavior: 'smooth'
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navHomeLink?.addEventListener('click', scrollToHero);
 
 
-    // Integrated Quote Modal (from form.html) on LAND.HTML
+
     const modal = document.getElementById('quoteModal');
     if (!modal) return;
 
@@ -40,14 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (select && service) {
             const normalized = String(service).trim().toLowerCase();
-            // Match by option value (we set option values in modal markup)
+
             const opt = Array.from(select.options).find((o) => String(o.value).trim().toLowerCase() === normalized);
             if (opt) {
                 select.value = opt.value;
                 opt.selected = true;
                 return;
             }
-            // Fallback match by visible text
+
             const opt2 = Array.from(select.options).find((o) => String(o.textContent).trim().toLowerCase() === normalized);
             if (opt2) {
                 opt2.selected = true;
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Footer "Contact" link to open the quote modal
+
     const contactOpen = document.querySelector('[data-open-quote="true"]');
     contactOpen?.addEventListener('click', (e) => {
         e.preventDefault();
@@ -80,8 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (form) {
         form.addEventListener('submit', (e) => {
-            // remove e.preventDefault() once you have a backend endpoint
-            // e.preventDefault();
+
+
         });
     }
 });

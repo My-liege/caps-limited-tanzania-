@@ -35,7 +35,7 @@ body {
     padding: 0 20px;
 }
 
-/* Navigation Bar */
+
 .navbar {
     position: sticky;
     top: 0;
@@ -111,7 +111,7 @@ body {
     color: var(--white);
 }
 
-/* Hero Section */
+
 .hero {
     background: linear-gradient(135deg, rgba(44, 62, 80, 0.85), rgba(52, 152, 219, 0.85)), url('img/caps-team.jpg') center/cover no-repeat;
     color: var(--white);
@@ -213,7 +213,8 @@ body {
 }
 
 .quote-modal__content {
-    background: #ffffff; /* pure white for contrast */
+    background: #ffffff;
+
     border-radius: var(--border-radius);
     box-shadow: 0 20px 60px rgba(0,0,0,0.25);
     overflow: hidden;
@@ -307,7 +308,8 @@ body {
     font-size: 1rem;
     transition: var(--transition);
     resize: vertical;
-    color: #2d3748; /* dark gray for contrast */
+    color: #2d3748;
+
     background: #ffffff;
 }
 
@@ -539,14 +541,14 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    /* Slightly darker overlay so images stay visible but words pop */
+
     background: linear-gradient(135deg, rgba(18, 28, 41, 0.78) 0%, rgba(52, 152, 219, 0.55) 100%);
     border-radius: var(--border-radius);
     z-index: 1;
 }
 
 .why-choose .feature-card::before {
-    /* Match overlay on the Why Choose section */
+
     background: linear-gradient(135deg, rgba(18, 28, 41, 0.78) 0%, rgba(52, 152, 219, 0.55) 100%);
 }
 
