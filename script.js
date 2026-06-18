@@ -1,7 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.nav-hamburger');
+    const menu = document.querySelector('.nav-menu');
+
+    if (hamburger && menu) {
+        const setState = (isOpen) => {
+            hamburger.setAttribute('aria-expanded', String(isOpen));
+            hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+            menu.classList.toggle('active', isOpen);
+        };
+
+        // Default closed for mobile
+        setState(false);
+
+        hamburger.addEventListener('click', () => {
+            const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            setState(!isOpen);
+        });
+
+        // Close menu when any navigation link is clicked
+        menu.addEventListener('click', (e) => {
+            const link = e.target && e.target.closest && e.target.closest('a');
+            if (link) setState(false);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') setState(false);
+        });
+    }
+
     const logoLink = document.querySelector('.nav-brand a');
     const navHomeLink = document.querySelector('.nav-logo-link');
     const hero = document.querySelector('#hero');
+
+
 
     const scrollToHero = (e) => {
         e?.preventDefault?.();
