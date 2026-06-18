@@ -597,7 +597,7 @@ section {
 }
 
 .feature-card.feature-icon-3 {
-    background-image: url('img/1744364103_7f04276d1e66b23f9aa1.jpg');
+    background-image: url('img/1744364103_7f04276d1e66b23f9aa1.jpeg');
 }
 
 .feature-card.feature-icon-4 {
@@ -605,7 +605,7 @@ section {
 }
 
 .feature-card.feature-icon-5 {
-    background-image: url('img/1744364103_7f04276d1e66b23f9aa1.jpg');
+    background-image: url('img/1744364103_7f04276d1e66b23f9aa1.jpeg');
 }
 
 .feature-card.feature-icon-6 {
@@ -760,6 +760,29 @@ section {
 .footer-ico {
     width: 1.2rem;
     flex: 0 0 auto;
+    line-height: 1;
+}
+
+.footer-ico--instagram {
+    color: #ffffff;
+}
+
+.footer-ico--facebook {
+    color: #ffffff;
+}
+
+.footer-social-link {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-social-link:hover {
+    color: var(--secondary-color);
+    transform: translateY(-1px);
 }
 
 .footer-address {
